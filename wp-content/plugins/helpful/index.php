@@ -99,7 +99,7 @@ class Helpful
                 `feedback` text,
                 PRIMARY KEY (`id`),
                 KEY `id_post` (`id_post`),
-                CONSTRAINT `wp_helpful_ibfk_1` FOREIGN KEY (`id_post`) REFERENCES `%1$sposts` (`ID`) ON DELETE CASCADE
+                CONSTRAINT `%1$shelpful_ibfk_1` FOREIGN KEY (`id_post`) REFERENCES `%1$sposts` (`ID`) ON DELETE CASCADE
             ) ENGINE=InnoDB DEFAULT CHARSET=latin1;        
         ', $wpdb->prefix);
         // Execute query:
