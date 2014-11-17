@@ -10,8 +10,9 @@
         <label for="why">Why?</label>
         <textarea name="why" id="why" cols="30" rows="10" placeholder="Could you provide me some feedback?"></textarea>
     </div>
-	<input type="hidden" name="helpful-rating" value="1" />
-	<input type="hidden" name="post_id" value="<?php echo the_ID(); ?>" />
-	<input type="submit" value="Send feedback">
+    <input type="hidden" name="helpful-rating" value="1" />
+    <input type="hidden" name="post_id" value="<?php echo the_ID(); ?>" />
+    <input type="submit" value="Send feedback">
+    <?php wp_nonce_field( 'helpful' ); ?>
 </form>
 <?php endif; ?>
