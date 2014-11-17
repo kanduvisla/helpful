@@ -124,7 +124,7 @@ class Helpful
     {
         global $wpdb;
         
-        if(isset($_POST['rating']))
+        if(isset($_POST['rating']) && wp_verify_nonce( $_REQUEST['_wpnonce'], 'helpful' ))
         {
             // Get the post ID:
             $postId = intval($_POST['post_id']);
